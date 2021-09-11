@@ -374,6 +374,21 @@ img{
 .footer__social:hover{
     color: var(--first-color);
 }
+.footer__scroll{
+    align-self:flex-end;
+    background-color:var(--dark-color);
+    padding-top: -20rem);
+    padding-bottom: 4rem;
+    padding-right: 4rem;
+    row-gap: 0rem;
+  }
+.footer__scroll-link{
+    writing-mode: vertical-lr;
+    transform: rotate(0deg);
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    float: right;
+}
 
 /* ===== MEDIA QUERIES =====*/
 /* For small devices */
