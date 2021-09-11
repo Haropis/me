@@ -377,10 +377,7 @@ img{
 .footer__scroll{
     align-self:flex-end;
     background-color:var(--dark-color);
-    padding-top: -20rem);
-    padding-bottom: 4rem;
     padding-right: 4rem;
-    row-gap: 0rem;
   }
 .footer__scroll-link{
     writing-mode: vertical-lr;
