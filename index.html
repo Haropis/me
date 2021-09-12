@@ -167,14 +167,13 @@
                         <span class="contact__text">10, Tunde Ebadan Way, Off The Bells Drive, Ota,Ogun State, Nigeria.</span>
                     </div>
 
-                    <?=$thankYou ?>
                     <form action="contact.php" method="POST" class="contact__form">
                         <div class="contact__inputs">
-                            <input type="text" placeholder="Name" name="sender name" class="contact__input">
-                            <input type="mail" placeholder="Email" name="sender email" class="contact__input">
+                            <input type="text" placeholder="Name" name="name" class="contact__input">
+                            <input type="mail" placeholder="Email" name="email" class="contact__input">
                         </div>
 
-                        <textarea name="" placeholder="Type message here" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <textarea name="comment" placeholder="Type message here" id="" cols="0" rows="10" class="contact__input"></textarea>
                     
                         <input type="submit" value="Submit" class="contact__button">
                     </form>

@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>  
 <html>
 <head>
 <style>
@@ -8,8 +9,8 @@
 
 <?php
 // define variables and set to empty values
-$nameErr = $emailErr = "";
-$name = $email = $comment = "";
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -31,12 +32,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $emailErr = "Invalid email format";
     }
   }
-  
+    
+  if (empty($_POST["website"])) {
+    $website = "";
+  } else {
+    $website = test_input($_POST["website"]);
+    // check if URL address syntax is valid
+    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
+      $websiteErr = "Invalid URL";
+    }    
+  }
+
   if (empty($_POST["comment"])) {
     $comment = "";
   } else {
     $comment = test_input($_POST["comment"]);
   }
+
+  if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+  }
+}
 
 function test_input($data) {
   $data = trim($data);
@@ -55,9 +73,18 @@ function test_input($data) {
   E-mail: <input type="text" name="email">
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
+  Website: <input type="text" name="website">
+  <span class="error"><?php echo $websiteErr;?></span>
+  <br><br>
   Comment: <textarea name="comment" rows="5" cols="40"></textarea>
   <br><br>
-    <input type="submit" name="submit" value="Submit">  
+  Gender:
+  <input type="radio" name="gender" value="female">Female
+  <input type="radio" name="gender" value="male">Male
+  <input type="radio" name="gender" value="other">Other
+  <span class="error">* <?php echo $genderErr;?></span>
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
 </form>
 
 <?php
