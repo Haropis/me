@@ -1,3 +1,18 @@
+<?php
+
+if($_POST["submit"]) {
+    $recipient="your@email.address";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -167,20 +182,15 @@
                         <span class="contact__text">10, Tunde Ebadan Way, Off The Bells Drive, Ota,Ogun State, Nigeria.</span>
                     </div>
 
-                    <form action="mailto:adepelumiayo312@gmail.com" method="POST" enctype="multipart/form-data" class="contact__form">
+                    <?=$thankYou ?>
+                    <form action="contact.php" method="POST" class="contact__form">
                         <div class="contact__inputs">
-                            <input type="text" placeholder="Name" class="contact__input">
-                            <input type="mail" placeholder="Email" class="contact__input">
+                            <input type="text" placeholder="Name" name="sender name" class="contact__input">
+                            <input type="mail" placeholder="Email" name="sender email" class="contact__input">
                         </div>
 
                         <textarea name="" placeholder="Type message here" id="" cols="0" rows="10" class="contact__input"></textarea>
                     
-                        <?php
-                            if($_POST["message"]) {
-                            mail("your@email.address", "Here is the subject line",
-                            $_POST["insert your message here"]. "From: an@email.address");
-                            }
-                        ?>
                         <input type="submit" value="Submit" class="contact__button">
                     </form>
                 </div>
