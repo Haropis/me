@@ -204,7 +204,7 @@ img{
     color: var(--white-color);
 }
 .home__img{
-    position: absolute;
+    position:absolute;
     right: 0;
     bottom: 0;
     width: 295px;
@@ -285,7 +285,9 @@ img{
 .portfolio__img{
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
+
 .portfolio__img img{
     border-radius: .5rem;
 }
