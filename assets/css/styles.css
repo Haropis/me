@@ -203,6 +203,11 @@ img{
     transform: rotate(-180deg);
     color: var(--white-color);
 }
+.scroll-link{
+    writing-mode:horizontal-tb;
+    transform: rotate(-180deg);
+    color: var(--white-color);
+}
 .home__img{
     position:absolute;
     right: 0;
