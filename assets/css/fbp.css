@@ -1,5 +1,5 @@
-/* ===== LOGOS =====*/
-.logos{
+/* ===== FBP =====*/
+.fbp{
     background-color: var(--white-color);
 }
 
@@ -8,12 +8,12 @@
   }
   
   /* Position the image container (needed to position the left and right arrows) */
-  .container {
+  .fbp-container {
     position: relative;
   }
   
   /* Hide the images by default */
-  .mySlides {
+  .fbpSlides {
     display:none;
   }
   
@@ -52,7 +52,7 @@
   }
   
   /* Number text (1/3 etc) */
-  .numbertext {
+  .fbpnumbertext {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
@@ -61,7 +61,7 @@
   }
   
   /* Container for image text */
-  .caption-container {
+  .fbp-caption-container {
     text-align: center;
     background-color: #222;
     padding: 2px 16px;
@@ -74,15 +74,15 @@
     clear: both;
   }
   
-   /* Six columns side by side */
-   .column {
+
+  /* nine columns side by side */
+  .column2 {
     float: left;
-    width: 16.66%;
+    width: 11.1%;
   }
-
-
+  
   /* Add a transparency effect for thumnbail images */
-  .demo {
+  .fbpdemo {
     opacity: 0.6;
   }
   
