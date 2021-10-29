@@ -11,11 +11,11 @@ $alert = '';
 
 if(isset($_POST['submit'])){
     $name = $_POST['name'];
-    $email = $_POST[email];
+    $email = $_POST['email'];
     $message = $_POST['message'];
 
     try{
-        $mail->isSMTP(); = 'smtp.gmail.com';
+        $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'adepelumiayo312@gmail.com'; //Gmail address which you want to use as SMTP server
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
 
         $mail->isHTML(true);
         $mail->Subject = 'Message Received (Contact Page)';
-        $mail->Body = '<h3>Name : $name <br>Email : $email <br>Message : $message </h3>';
+        $mail->Body = '<h3>Name : $name <br>Email : $email <br>Message : $message</h3>';
 
         $mail->send();
         $alert = '<div class="alert-success">
