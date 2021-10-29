@@ -1,3 +1,5 @@
+<?php include 'mail.php'; ?>
+
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -16,7 +18,10 @@
     </head>
     <body>
         
-                
+        <!--alert messages start-->
+        <?php echo $alert; ?>        
+        <!--alert messages end-->
+        
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
@@ -229,5 +234,11 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        <script type="text/javascript">
+        if(window.history.replaceState){
+            window.history.replaceState(null, null, window.location.href);
+        }
+        </script>
+
     </body>
 </html>
