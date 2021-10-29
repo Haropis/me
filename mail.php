@@ -18,12 +18,12 @@ if(isset($_POST['submit'])){
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'adepelumiayo312@gmail.com'; //Gmail address which you want to use as SMTP server
-        $mail->Password = 'haropismah#310'; //Gmail address password
+        $mail->Username = 'ayo.haropis@haropisglobal.com.ng'; //Gmail address which you want to use as SMTP server
+        $mail->Password = 'Haropismah#310'; //Gmail address password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = '587';
 
-        $mail->setFrom('adepelumiayo312@gmail.com'); //Gmail address which you used as SMTP server
+        $mail->setFrom('ayo.haropis@haropisglobal.com.ng'); //Gmail address which you used as SMTP server
         $mail->addAddress('ayo.haropis@haropisglobal.com.ng'); //Email address where you want to receive emails (you can use any mail address)
 
         $mail->isHTML(true);
