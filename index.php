@@ -228,17 +228,18 @@
                 </div>
         </footer>
         
+        <script type="text/javascript">
+        if(window.history.replaceState){
+            window.history.replaceState(null, null, window.location.href);
+        }
+        </script>
 
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
-        <script type="text/javascript">
-        if(window.history.replaceState){
-            window.history.replaceState(null, null, window.location.href);
-        }
-        </script>
+      
 
     </body>
 </html>
