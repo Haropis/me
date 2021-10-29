@@ -1,3 +1,5 @@
+<?php include 'mail.php'; ?>
+
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -15,6 +17,12 @@
         <link rel = "icon" href ="/assets/img/logo.png" type = "image/x-icon" sizes="16x16">
     </head>
     <body>
+        
+        <!--alert messages start-->
+
+
+        <!--alert messages end-->
+        
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
@@ -177,9 +185,7 @@
                             <input type="text" name="name" placeholder="Name" class="contact__input" required>
                             <input type="mail" name="email" placeholder="Email" class="contact__input" required>
                         </div>
-
-                        <textarea name="comment" placeholder="Type message here" id="" cols="0" rows="10" class="contact__input"></textarea>
-                    
+                        <textarea type="text" name="message" placeholder="Type message here" id="" cols="0" rows="10" class="contact__input"></textarea>
                         <input type="submit" value="Submit" class="contact__button">
                     </form>
                 </div>
