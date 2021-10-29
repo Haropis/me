@@ -34,10 +34,13 @@ if(isset($_POST['submit'])){
         $alert = '<div class="alert-success">
                     <span>Message Sent! Thank you for Contacting Us.</span>
                 </div>';
-    }catch (Exception $e){
+    } catch (Exception $e){
         $alert = '<div class="alert-error">
         <span>'.$e->getMessage().'</span>
     </div>';
     }
-    }
+}
+
+
+
 ?>
